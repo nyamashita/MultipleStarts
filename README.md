@@ -21,7 +21,7 @@ MULTIPLE_STARTS("kmmult(dat,k)",100)
 1.0.0.
 
 ## Requirement
-snowfall package (only for MULTIPLE_STARTS.R)
+snowfall package (only for MultipleStart.R)
 
 ## Usage
 - "function_args" is repeated "starts" times
