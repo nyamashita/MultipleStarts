@@ -8,13 +8,17 @@ Many multivariate analysis requires multiple stats which the algorithm starts fr
 
 ## Demo
 ```R:example.R
+source("https://raw.githubusercontent.com/nyamashita/MultipleStarts/master/MultipleStart_nosnow.R")
+
+dat <- matrix(rnorm(250),50,5)
+
 kmmult <- function(dat,k){ #modified k-means
-    reslist <- kmeans(dat,k)
-    lossmin <- reslist$betweenss/reslist[[ite]]$totss
+  reslist <- kmeans(dat,k)
+  lossmin <- reslist$betweenss/reslist$totss
   list(reslist,LOSS_MIN=lossmin)
 }
 
-MULTIPLE_STARTS("kmmult(dat,k)",100)
+MULTIPLE_STARTS("kmmult(dat,3)",100)
 ```
 
 ## Version
