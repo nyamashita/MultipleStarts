@@ -14,7 +14,7 @@ dat <- matrix(rnorm(250),50,5)
 
 kmmult <- function(dat,k){ #modified k-means
   reslist <- kmeans(dat,k)
-  lossmin <- reslist$betweenss/reslist$totss
+  lossmin <- -reslist$betweenss/reslist$totss
   list(reslist,LOSS_MIN=lossmin)
 }
 
